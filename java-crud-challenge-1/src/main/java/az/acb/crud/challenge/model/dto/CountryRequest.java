@@ -2,6 +2,7 @@ package az.acb.crud.challenge.model.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,7 +24,7 @@ public class CountryRequest {
     private double area;
 
 
-    @NotBlank
+    @NotNull
     @Min(1)
     private Double population;
 }

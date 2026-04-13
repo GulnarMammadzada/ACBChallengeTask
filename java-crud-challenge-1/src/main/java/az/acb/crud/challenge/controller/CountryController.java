@@ -38,7 +38,7 @@ public class CountryController {
     public  CountryResponse updateCountry(@PathVariable Long id, @Valid @RequestBody CountryRequest countryRequest) {
         return countryService.updateCountry(id, countryRequest);
     }
-    @GetMapping
+    @GetMapping("/with-regions")
     public List<CountryResponse> getAllCountriesWithRegions() {
         return countryService.getAllCountriesWithRegions();
     }

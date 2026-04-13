@@ -1,7 +1,6 @@
 package az.acb.crud.challenge.model.dto;
 
-import az.acb.crud.challenge.model.entity.Country;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +18,6 @@ public class RegionRequest {
     private String description;
 
 
-    @NotBlank
-    private Country countryId;
+    @NotNull
+    private Long countryId;
 }

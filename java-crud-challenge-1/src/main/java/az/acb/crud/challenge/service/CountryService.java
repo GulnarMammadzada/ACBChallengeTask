@@ -25,16 +25,16 @@ public class CountryService {
         return CountryMapper.toResponse(savedCountry);
     }
 
-    public List<CountryResponse> getAllCountries() {
-        return countryRepository.findAll()
+    public List<CountryResponse> getAllCountriesWithRegions() {
+        return countryRepository.findAllWithRegions()
                 .stream()
                 .map(CountryMapper::toResponse)
                 .toList();
     }
-    public List<CountryResponse> getAllCountriesWithRegions() {
+
+    public List<CountryResponse> getAllCountries() {
         return countryRepository.findAll()
                 .stream()
-                .filter(country -> country.getRegions() != null)
                 .map(CountryMapper::toResponse)
                 .toList();
     }

@@ -19,7 +19,9 @@ public class RegionMapper {
         Region region = new Region();
         region.setName(regionRequest.getName());
         region.setDescription(regionRequest.getDescription());
-        region.setCountry_id(regionRequest.getCountryId());
+        az.acb.crud.challenge.model.entity.Country country = new az.acb.crud.challenge.model.entity.Country();
+        country.setId(regionRequest.getCountryId());
+        region.setCountry_id(country);
         return region;
     }
 
